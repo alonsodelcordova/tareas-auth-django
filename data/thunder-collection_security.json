@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "security",
+    "dateExported": "2024-03-10T14:35:25.527Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c6c0aff5-106e-48e8-b3fb-7b9625897407",
+            "colId": "bb4ea92d-40c5-4a65-bad3-2065287ecad4",
+            "containerId": "",
+            "name": "http://127.0.0.1:8000/register",
+            "url": "http://127.0.0.1:8000/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-10T14:35:14.241Z",
+            "modified": "2024-03-10T14:35:14.241Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"juan\",\n  \"email\": \"juan@email.com\",\n  \"password\": \"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
