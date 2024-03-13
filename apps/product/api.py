@@ -71,3 +71,19 @@ class ProductoUpdateView(views.APIView):
             return Response({'msg':'Imagen actualizada correctamente.'},status=status.HTTP_200_OK)
         except Producto.DoesNotExist:
             return Response({'msg':'Producto no encontrado.'},status=status.HTTP_404_NOT_FOUND)
+        
+# ingresar producto
+
+@api_view(['POST'])
+def ingresarProducto(request, id):
+    try:
+        producto = Producto.objects.get(id=id)
+        cantidad = request.data['cantidad']
+        producto.stock += cantidad
+        producto.save()
+        return Response({'msg':'Producto ingresado correctamente.'},status=status.HTTP_200_OK)
+    except Producto.DoesNotExist:
+        return Response({'msg':'Producto no encontrado.'},status=status.HTTP_404_NOT_FOUND)
+
+
+# venta de producto

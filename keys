@@ -1,0 +1,13 @@
+161.132.48.213
+6#7J6ye57V4!nB
+
+
+--- agregar usuario
+adduser alonso
+
+-- dar permisos de administrador
+usermod -aG sudo alonso
+
+
+-- iniciar como usuario
+su - alonso

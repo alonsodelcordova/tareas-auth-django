@@ -30,29 +30,6 @@ class Producto(models.Model):
         verbose_name_plural = 'Productos'
         ordering = ['id']
 
-class Ingreso(models.Model):
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    cantidad = models.IntegerField()
-    fecha = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.producto.nombre
-    
-    class Meta:
-        verbose_name = 'Ingreso'
-        verbose_name_plural = 'Ingresos'
-        ordering = ['id']
         
 
-class Venta(models.Model):
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    cantidad = models.IntegerField()
-    fecha = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.producto.nombre
-    
-    class Meta:
-        verbose_name = 'Venta'
-        verbose_name_plural = 'Ventas'
-        ordering = ['id']
