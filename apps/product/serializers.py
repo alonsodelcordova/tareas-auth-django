@@ -1,6 +1,6 @@
 from tareas_django.utils.base_serializers import DynamicFieldsModelSerializer
 
-from .models import Categoria, Producto, Venta, Ingreso
+from .models import Categoria, Producto
 
 class CategorySerializer(DynamicFieldsModelSerializer):
     class Meta:
